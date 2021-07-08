@@ -408,3 +408,13 @@ C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI
 C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\obj\Debug\net5.0\ref\MyAppCQRSPattern.UI.dll
 C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\obj\Debug\net5.0\MyAppCQRSPattern.UI.pdb
 C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\obj\Debug\net5.0\MyAppCQRSPattern.UI.genruntimeconfig.cache
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\Namotion.Reflection.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\NJsonSchema.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\NJsonSchema.Yaml.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\NSwag.Annotations.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\NSwag.AspNetCore.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\NSwag.Core.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\NSwag.Core.Yaml.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\NSwag.Generation.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\NSwag.Generation.AspNetCore.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\YamlDotNet.dll

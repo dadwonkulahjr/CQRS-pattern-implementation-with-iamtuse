@@ -14,4 +14,8 @@
     <ProjectReference Include="..\MyAppCQRSPattern.Application\MyAppCQRSPattern.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Identity\" />
+  </ItemGroup>
+
 </Project>

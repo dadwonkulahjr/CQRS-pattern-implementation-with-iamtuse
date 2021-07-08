@@ -270,6 +270,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[13.11.3, )"
             }
           },
           "imports": [

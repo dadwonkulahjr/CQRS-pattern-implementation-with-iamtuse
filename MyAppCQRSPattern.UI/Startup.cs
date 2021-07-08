@@ -5,8 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MyAppCQRSPattern.UI.Data;
-
+using MyAppCQRSPattern.Application;
+using MyAppCQRSPattern.Infrastructure;
+using MyAppCQRSPattern.Infrastructure.Data;
 
 namespace MyAppCQRSPattern.UI
 {
@@ -20,14 +21,16 @@ namespace MyAppCQRSPattern.UI
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+        { 
             services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+            services.AddControllersWithViews();
+            services.AddOpenApiDocument(options =>
+            {
+                options.Title = "MyApp CQRS Pattern Api Test";
+            });
+            services.AddInfrastructureServices(Configuration);
+            services.AddApplicationServices();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -46,6 +49,10 @@ namespace MyAppCQRSPattern.UI
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
+
+
             app.UseRouting();
 
             app.UseAuthentication();
@@ -54,6 +61,7 @@ namespace MyAppCQRSPattern.UI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
