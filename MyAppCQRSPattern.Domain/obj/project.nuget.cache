@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hVV4mG1MDFI450z5D7TAQmIORbD8UQ0I/tebfPmQHJPMt/mI34mW5GkQGxPClOyymb5rf2L+AtS7A78RG0Wigw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dad S. Wonkulah Jr\\source\\repos\\MyAppCQRSPatternSol\\MyAppCQRSPattern.Domain\\MyAppCQRSPattern.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dad S. Wonkulah Jr\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
