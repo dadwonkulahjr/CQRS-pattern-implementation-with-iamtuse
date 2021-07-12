@@ -418,3 +418,11 @@ C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI
 C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\NSwag.Generation.dll
 C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\NSwag.Generation.AspNetCore.dll
 C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\YamlDotNet.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\obj\Debug\net5.0\Razor\Pages\Admin\Students\Index.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\obj\Debug\net5.0\Razor\Pages\Admin\Students\Upsert.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\MediatR.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

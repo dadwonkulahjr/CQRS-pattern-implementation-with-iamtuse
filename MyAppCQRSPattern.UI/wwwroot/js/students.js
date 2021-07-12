@@ -16,13 +16,14 @@ function loadList() {
             { 'data': 'fullName', 'width': '25%' },
             { 'data': 'firstName', 'width': '25%' },
             { 'data': 'lastName', 'width': '25%' },
+            { 'data': 'gender.name', 'width': '25%' },
             { 'data': 'email', 'width': '25%' },
             { 'data': 'dateEnrolled', 'width': '25%' },
             {
                 'data': 'studentId',
                 'render': function (data) {
                     return `<div class="text-center">
-                            <a href="/admin/student/upsert?id=${data}" class="btn btn-success text-white"
+                            <a href="/admin/students/upsert?id=${data}" class="btn btn-success text-white"
                             style="cursor:pointer;width:100px;">
                              <i class="far fa-edit"></i>Edit
                             </a>

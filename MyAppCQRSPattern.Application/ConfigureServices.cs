@@ -1,6 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using MyAppCQRSPattern.Application.Common.Interfaces;
-using MyAppCQRSPattern.Application.Students.Queries.GetStudents;
+﻿using MediatR;
+using Microsoft.Extensions.DependencyInjection;
+using MyAppCQRSPattern.Application.Services.Repository;
+using MyAppCQRSPattern.Application.Services.Repository.IRepository;
+using System.Reflection;
 
 namespace MyAppCQRSPattern.Application
 {
@@ -8,7 +10,9 @@ namespace MyAppCQRSPattern.Application
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-            services.AddTransient<IGetStudentListQuery, GetStudentQuery>();
+            services.AddTransient<IGenderRepository, GenderRepository>();
+            services.AddMediatR(assemblies: Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
             return services;
         }
     }

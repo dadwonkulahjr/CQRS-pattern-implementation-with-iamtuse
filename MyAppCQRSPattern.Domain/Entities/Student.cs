@@ -17,13 +17,14 @@ namespace MyAppCQRSPattern.Domain.Entities
         public string LastName { get; set; }
         [Display(Name ="Date Enrolled"), Required]
         public DateTime? DateEnrolled { get; set; }
-        [Display(Name ="Student Email Address")]
+        [Display(Name ="Student Email Address"), Required]
         public string Email { get; set; }
         [Display(Name ="Fullname")]
         public string FullName
         {
             get { return FirstName + " " + LastName; }
         }
+        [Display(Name ="Gender")]
         public int GenderId { get; set; }
         public virtual Gender Gender { get; set; }
 

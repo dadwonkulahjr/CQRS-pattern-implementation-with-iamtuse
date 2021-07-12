@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,13 +25,25 @@ namespace MyAppCQRSPattern.UI
         { 
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddRazorPages();
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                    .AddNewtonsoftJson(options =>
+                    {
+                        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                    });
             services.AddOpenApiDocument(options =>
             {
                 options.Title = "MyApp CQRS Pattern Api Test";
             });
             services.AddInfrastructureServices(Configuration);
             services.AddApplicationServices();
+            services.Configure<RouteOptions>(options =>
+            {
+                options.AppendTrailingSlash = true;
+                options.LowercaseQueryStrings = true;
+                options.LowercaseUrls = true;
+            });
+
+           
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

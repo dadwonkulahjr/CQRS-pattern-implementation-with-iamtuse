@@ -1,0 +1,143 @@
+﻿@page
+@model MyAppCQRSPattern.UI.Pages.Admin.Students.UpsertModel
+@{
+    if (Model.StudentVM.StudentObj.StudentId == 0)
+    {
+        ViewData["Title"] = "Create new student";
+    }
+    else
+    {
+        ViewData["Title"] = "Update existing student";
+    }
+
+}
+
+<form method="post" asp-page="upsert">
+    <div class="container">
+        @if (Model.StudentVM.StudentObj.StudentId != 0)
+        {
+            <input type="hidden" asp-for="@Model.StudentVM.StudentObj.StudentId" />
+        }
+        <div class="row px-2 mx-2 backgroundWhite border shadow" style="height:580px;">
+            <div class="col-12 px-3" style="border-bottom:1px solid #325d88">
+
+
+                <div class="row">
+                    <div class="col-12">
+                    </div>
+                    @if (Model.StudentVM.StudentObj.StudentId == 0)
+                    {
+                        <h4 class="text-success"><i class="fas fa-user-plus"></i>&nbsp;Create new student</h4>
+                    }
+                    else
+                    {
+                        <h4 class="text-success"><i class="fas fa-edit"></i>&nbsp;Update student</h4>
+                    }
+                </div>
+
+            </div>
+            <div class="col-8 pt-3">
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="StudentVM.StudentObj.FirstName"></label>
+                    </div>
+                    <div class="col-9">
+                        <input asp-for="StudentVM.StudentObj.FirstName" class="form-control" placeholder="First name..." />
+                        <span asp-validation-for="StudentVM.StudentObj.FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="StudentVM.StudentObj.LastName"></label>
+                    </div>
+                    <div class="col-9">
+                        <input asp-for="StudentVM.StudentObj.LastName" class="form-control" placeholder="Last name..." />
+                        <span asp-validation-for="StudentVM.StudentObj.LastName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="StudentVM.StudentObj.GenderId"></label>
+                    </div>
+                    <div class="col-9">
+                        @Html.DropDownListFor(m => m.StudentVM.StudentObj.GenderId,
+                          Model.StudentVM.StudentSelectListItemDropdown,
+                            "-Please select a Gender-",
+                            new { @class = "custom-select" })
+                        <span asp-validation-for="StudentVM.StudentObj.GenderId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="StudentVM.StudentObj.Email"></label>
+                    </div>
+                    <div class="col-9">
+                        <input asp-for="StudentVM.StudentObj.Email" class="form-control" placeholder="Email..." />
+                        <span asp-validation-for="StudentVM.StudentObj.Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                @if (Model.StudentVM.StudentObj.StudentId == 0)
+                {
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="StudentVM.StudentObj.DateEnrolled"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="StudentVM.StudentObj.DateEnrolled" type="date" class="form-control" />
+                            <span asp-validation-for="StudentVM.StudentObj.DateEnrolled" class="text-danger"></span>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label asp-for="StudentVM.StudentObj.DateEnrolled"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="StudentVM.StudentObj.DateEnrolled" type="date" class="form-control" readonly="readonly" />
+                            <span asp-validation-for="StudentVM.StudentObj.DateEnrolled" class="text-danger"></span>
+                        </div>
+                    </div>
+                }
+
+
+                <div class="form-group row">
+                    <div class="col-9 offset-3">
+                        <div class="row">
+                            <div class="col-6 col-12">
+                                @if (Model.StudentVM.StudentObj.StudentId == 0)
+                                {
+                                    <button type="submit" class="btn btn-primary form-control">
+                                        <i class="far fa-edit"></i>&nbsp;Create
+                                    </button>
+                                }
+                                else
+                                {
+                                    <button type="submit" class="btn btn-primary form-control">
+                                        <i class="far fa-edit"></i>&nbsp;Update
+                                    </button>
+                                }
+
+                            </div>
+                            <div class="col-12">
+                                <a asp-page="./Index" class="btn btn-success form-control">
+                                    <i class="fas fa-arrow-circle-left"></i>&nbsp;Back
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+}

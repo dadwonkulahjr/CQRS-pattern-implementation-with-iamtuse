@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAppCQRSPattern.UI", "MyAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAppCQRSPattern.Domain", "MyAppCQRSPattern.Domain\MyAppCQRSPattern.Domain.csproj", "{FEA8CFFC-6B95-49E4-B36E-66BC7423AD66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAppCQRSPattern.Application", "MyAppCQRSPattern.Application\MyAppCQRSPattern.Application.csproj", "{263FE19C-6B63-445A-99BD-02DA2CA6F462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAppCQRSPattern.Application", "MyAppCQRSPattern.Application\MyAppCQRSPattern.Application.csproj", "{263FE19C-6B63-445A-99BD-02DA2CA6F462}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAppCQRSPattern.Infrastructure", "MyAppCQRSPattern.Infrastructure\MyAppCQRSPattern.Infrastructure.csproj", "{AC00B81C-41C1-420F-B8B2-A53745315B28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAppCQRSPattern.Infrastructure", "MyAppCQRSPattern.Infrastructure\MyAppCQRSPattern.Infrastructure.csproj", "{AC00B81C-41C1-420F-B8B2-A53745315B28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
