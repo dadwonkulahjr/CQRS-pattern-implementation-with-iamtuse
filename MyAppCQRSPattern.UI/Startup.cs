@@ -1,14 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyAppCQRSPattern.Application;
 using MyAppCQRSPattern.Infrastructure;
-using MyAppCQRSPattern.Infrastructure.Data;
 
 namespace MyAppCQRSPattern.UI
 {
@@ -43,7 +40,8 @@ namespace MyAppCQRSPattern.UI
                 options.LowercaseUrls = true;
             });
 
-           
+          
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

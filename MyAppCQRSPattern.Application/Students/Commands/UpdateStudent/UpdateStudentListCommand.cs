@@ -28,7 +28,7 @@ namespace MyAppCQRSPattern.Application.Students.Commands.UpdateStudent
         }
         public async Task<Student> Handle(UpdateStudentListCommand request, CancellationToken cancellationToken)
         {
-            var checkStudentInDb = await _appDbContext.Students.FirstOrDefaultAsync(s => s.StudentId == request.Student.StudentId);
+            var checkStudentInDb = await _appDbContext.Students.FirstOrDefaultAsync(s => s.StudentId == request.Student.StudentId, cancellationToken);
             if (checkStudentInDb != null)
             {
                 checkStudentInDb.FirstName = request.Student.FirstName;

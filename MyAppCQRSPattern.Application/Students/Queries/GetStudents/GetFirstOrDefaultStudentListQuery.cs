@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace MyAppCQRSPattern.Application.Students.Queries.GetStudents
 {
-    public class GetFirstOrDefaultListQuery : IRequest<Student>
+    public class GetFirstOrDefaultStudentListQuery : IRequest<Student>
     {
-        public GetFirstOrDefaultListQuery(Student student)
+        public GetFirstOrDefaultStudentListQuery(Student student)
         {
             Student = student;
         }
@@ -18,7 +18,7 @@ namespace MyAppCQRSPattern.Application.Students.Queries.GetStudents
         public Student Student { get; }
     }
 
-    public class GetFirstOrDefaultListQueryHandler : IRequestHandler<GetFirstOrDefaultListQuery, Student>
+    public class GetFirstOrDefaultListQueryHandler : IRequestHandler<GetFirstOrDefaultStudentListQuery, Student>
     {
         private readonly IApplicationDbContext _appDbContext;
         public GetFirstOrDefaultListQueryHandler(IApplicationDbContext applicationDbContext)
@@ -26,9 +26,9 @@ namespace MyAppCQRSPattern.Application.Students.Queries.GetStudents
             _appDbContext = applicationDbContext;
         }
 
-        public async Task<Student> Handle(GetFirstOrDefaultListQuery request, CancellationToken cancellationToken)
+        public async Task<Student> Handle(GetFirstOrDefaultStudentListQuery request, CancellationToken cancellationToken)
         {
-            return await _appDbContext.Students.FirstOrDefaultAsync(s => s.StudentId == request.Student.StudentId);
+            return await _appDbContext.Students.FirstOrDefaultAsync(s => s.StudentId == request.Student.StudentId, cancellationToken);
           
         }
     }

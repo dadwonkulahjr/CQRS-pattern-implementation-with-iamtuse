@@ -1,0 +1,84 @@
+﻿@page
+@model MyAppCQRSPattern.UI.Pages.Admin.Genders.UpsertModel
+@{
+    if (Model.GenderObj.GenderId == 0)
+    {
+        ViewData["Title"] = "Create new gender";
+    }
+    else
+    {
+        ViewData["Title"] = "Update gender";
+    }
+}
+
+<form method="post" asp-page="upsert">
+    <div class="container">
+        @if (Model.GenderObj.GenderId != 0)
+        {
+            <input type="hidden" asp-for="@Model.GenderObj.GenderId" />
+        }
+        <div class="row px-2 mx-2 backgroundWhite border shadow">
+            <div class="col-12 px-3" style="border-bottom:1px solid #325d88">
+
+
+                <div class="row">
+                    <div class="col-12">
+                    </div>
+                    @if (Model.GenderObj.GenderId == 0)
+                    {
+                        <h4 class="text-success"><i class="fas fa-user-plus"></i>&nbsp;Create new gender</h4>
+                    }
+                    else
+                    {
+                        <h4 class="text-success"><i class="fas fa-edit"></i>&nbsp;Update gender</h4>
+                    }
+                </div>
+
+            </div>
+            <div class="col-8 pt-3">
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="GenderObj.Name "></label>
+                    </div>
+                    <div class="col-9">
+                        <input asp-for="GenderObj.Name" class="form-control" placeholder="Gender name..." />
+                        <span asp-validation-for="GenderObj.Name" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-9 offset-3">
+                        <div class="row">
+                            <div class="col-6 col-12">
+                                @if (Model.GenderObj.GenderId == 0)
+                                {
+                                    <button type="submit" class="btn btn-primary form-control">
+                                        <i class="far fa-edit"></i>&nbsp;Create
+                                    </button>
+                                }
+                                else
+                                {
+                                    <button type="submit" class="btn btn-primary form-control">
+                                        <i class="far fa-edit"></i>&nbsp;Update
+                                    </button>
+                                }
+
+                            </div>
+                            <div class="col-12">
+                                <a asp-page="./Index" class="btn btn-success form-control">
+                                    <i class="fas fa-arrow-circle-left"></i>&nbsp;Back
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+}

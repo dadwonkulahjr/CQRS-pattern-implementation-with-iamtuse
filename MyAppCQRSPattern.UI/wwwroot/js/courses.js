@@ -13,19 +13,14 @@ function loadList() {
 
         },
         'columns': [
-            { 'data': 'student.fullName', 'width': '15%' },
-            { 'data': 'student.firstName', 'width': '15%' },
-            { 'data': 'student.lastName', 'width': '15%' },
-            { 'data': 'student.email', 'width': '15%' },
-            { 'data': 'student.dateEnrolled', 'width': '15%' },
-            { 'data': 'courseName', 'width': '15%' },
-            { 'data': 'courseHour', 'width': '15%' },
+            { 'data': 'courseName', 'width': '25%' },
             { 'data': 'courseNumber', 'width': '15%' },
+            { 'data': 'creditHour', 'width': '15%' },
             {
                 'data': 'courseId',
                 'render': function (data) {
                     return `<div class="text-center">
-                            <a href="/admin/course/upsert?id=${data}" class="btn btn-success text-white"
+                            <a href="/admin/courses/upsert?id=${data}" class="btn btn-success text-white"
                             style="cursor:pointer;width:100px;">
                              <i class="far fa-edit"></i>Edit
                             </a>

@@ -1,0 +1,104 @@
+﻿@page
+@model MyAppCQRSPattern.UI.Pages.Admin.Courses.UpsertModel
+@{
+    if (Model.CourseVM.CourseObj.CourseId == 0)
+    {
+        ViewData["Title"] = "Create new course";
+    }
+    else
+    {
+        ViewData["Title"] = "Update course";
+    }
+}
+
+<form method="post" asp-page="upsert">
+    <div class="container">
+        @if (Model.CourseVM.CourseObj.CourseId != 0)
+        {
+            <input type="hidden" asp-for="@Model.CourseVM.CourseObj.CourseId" />
+        }
+        <div class="row px-2 mx-2 backgroundWhite border shadow" style="height:580px;">
+            <div class="col-12 px-3" style="border-bottom:1px solid #325d88">
+
+
+                <div class="row">
+                    <div class="col-12">
+                    </div>
+                    @if (Model.CourseVM.CourseObj.CourseId == 0)
+                    {
+                        <h4 class="text-success"><i class="fas fa-user-plus"></i>&nbsp;Create new course</h4>
+                    }
+                    else
+                    {
+                        <h4 class="text-success"><i class="fas fa-edit"></i>&nbsp;Update course</h4>
+                    }
+                </div>
+
+            </div>
+            <div class="col-8 pt-3">
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="CourseVM.CourseObj.CourseName"></label>
+                    </div>
+                    <div class="col-9">
+                        <input asp-for="CourseVM.CourseObj.CourseName" class="form-control" placeholder="Course name..." />
+                        <span asp-validation-for="CourseVM.CourseObj.CourseName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="CourseVM.CourseObj.CourseNumber"></label>
+                    </div>
+                    <div class="col-9">
+                        <input asp-for="CourseVM.CourseObj.CourseNumber" class="form-control" placeholder="Course number..." />
+                        <span asp-validation-for="CourseVM.CourseObj.CourseNumber" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="CourseVM.CourseObj.CreditHour"></label>
+                    </div>
+                    <div class="col-9">
+                        <input asp-for="CourseVM.CourseObj.CreditHour" class="form-control" placeholder="Credit hour..." />
+                        <span asp-validation-for="CourseVM.CourseObj.CreditHour" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-9 offset-3">
+                        <div class="row">
+                            <div class="col-6 col-12">
+                                @if (Model.CourseVM.CourseObj.CourseId == 0)
+                                {
+                                    <button type="submit" class="btn btn-primary form-control">
+                                        <i class="far fa-edit"></i>&nbsp;Create
+                                    </button>
+                                }
+                                else
+                                {
+                                    <button type="submit" class="btn btn-primary form-control">
+                                        <i class="far fa-edit"></i>&nbsp;Update
+                                    </button>
+                                }
+
+                            </div>
+                            <div class="col-12">
+                                <a asp-page="./Index" class="btn btn-success form-control">
+                                    <i class="fas fa-arrow-circle-left"></i>&nbsp;Back
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+}

@@ -11,8 +11,8 @@ namespace MyAppCQRSPattern.Application
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddTransient<IGenderRepository, GenderRepository>();
-            services.AddMediatR(assemblies: Assembly.GetExecutingAssembly());
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddMediatR(Assembly.GetExecutingAssembly());
             return services;
         }
     }

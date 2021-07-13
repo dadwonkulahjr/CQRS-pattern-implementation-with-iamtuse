@@ -43,7 +43,7 @@ namespace MyAppCQRSPattern.UI.Pages.Admin.Students
 
                 StudentVM.StudentObj.StudentId = id.Value;
 
-                StudentVM.StudentObj = await _mediatorQuery.Send(new GetFirstOrDefaultListQuery(StudentVM.StudentObj));
+                StudentVM.StudentObj = await _mediatorQuery.Send(new GetFirstOrDefaultStudentListQuery(StudentVM.StudentObj));
 
                 StudentVM.StudentSelectListItemDropdown = _genderRepo.GetDropdownSelectListItemsForGender();
 

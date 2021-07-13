@@ -426,3 +426,8 @@ C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI
 C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\MediatR.dll
 C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\obj\Debug\net5.0\Razor\Pages\Admin\Courses\Index.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\obj\Debug\net5.0\Razor\Pages\Admin\Courses\Upsert.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\obj\Debug\net5.0\Razor\Pages\Admin\Genders\Index.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\obj\Debug\net5.0\Razor\Pages\Admin\Genders\Upsert.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\MyAppCQRSPatternSol\MyAppCQRSPattern.UI\obj\Debug\net5.0\Razor\Pages\Admin\MainMenuItems\Index.cshtml.g.cs

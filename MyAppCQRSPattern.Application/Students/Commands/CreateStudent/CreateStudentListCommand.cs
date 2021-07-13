@@ -26,7 +26,7 @@ namespace MyAppCQRSPattern.Application.Students.Commands.CreateStudent
         }
         public async Task<Student> Handle(CreateStudentListCommand request, CancellationToken cancellationToken)
         {
-            await _appDbContext.Students.AddAsync(request.Student);
+            await _appDbContext.Students.AddAsync(request.Student, cancellationToken);
             await _appDbContext.SaveChangesAsync(cancellationToken);
             return request.Student;
         }
