@@ -15,7 +15,6 @@ namespace MyAppCQRSPattern.UI.Pages.Admin.Genders
 
         [BindProperty]
         public Gender GenderObj { get; set; }
-
         public UpsertModel(IMediator mediator)
         {
             _mediatoQuery = mediator;
@@ -44,7 +43,6 @@ namespace MyAppCQRSPattern.UI.Pages.Admin.Genders
 
             return Page();
         }
-
         public async Task<IActionResult> OnPost()
         {
             if (!ModelState.IsValid) { return Page(); }

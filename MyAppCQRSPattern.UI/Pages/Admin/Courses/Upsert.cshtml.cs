@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -44,7 +41,6 @@ namespace MyAppCQRSPattern.UI.Pages.Admin.Courses
 
 
         }
-
         public async Task<IActionResult> OnPost()
         {
             if (!ModelState.IsValid) { return Page(); }

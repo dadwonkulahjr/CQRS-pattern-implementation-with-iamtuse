@@ -17,7 +17,6 @@ namespace MyAppCQRSPattern.UI.Pages.Admin.Students
 
         [BindProperty]
         public StudentVM StudentVM { get; set; }
-
         public UpsertModel(IGenderRepository studentRepository, IMediator mediator)
         {
             _genderRepo = studentRepository;
